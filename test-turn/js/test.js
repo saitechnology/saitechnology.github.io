@@ -31,7 +31,7 @@ test('Candidate Gathering', function(t) {
 
   driver.get((process.env.BASEURL ? process.env.BASEURL :
       ('file://' + process.cwd())) +
-      '/src/content/peerconnection/trickle-ice/index.html')
+      '/test-turn/index.html')
   .then(function() {
     t.pass('page loaded');
     return driver.findElement(webdriver.By.id('gather')).click();
@@ -61,7 +61,7 @@ test('Loading server data', {skip: process.env.BROWSER === 'firefox'},
 
     driver.get((process.env.BASEURL ? process.env.BASEURL :
         ('file://' + process.cwd())) +
-        '/src/content/peerconnection/trickle-ice/index.html')
+        '/test-turn/index.html')
     .then(function() {
       t.pass('page loaded');
       return driver.findElement(webdriver.By.css('#servers>option'));
@@ -92,7 +92,7 @@ test('Adding a server', {skip: process.env.BROWSER === 'firefox'},
 
     driver.get((process.env.BASEURL ? process.env.BASEURL :
         ('file://' + process.cwd())) +
-        '/src/content/peerconnection/trickle-ice/index.html')
+        '/test-turn/index.html')
     .then(function() {
       t.pass('page loaded');
       return driver.findElement(webdriver.By.id('url'))
@@ -122,7 +122,7 @@ test('Removing a server', {skip: process.env.BROWSER === 'firefox'},
 
     driver.get((process.env.BASEURL ? process.env.BASEURL :
         ('file://' + process.cwd())) +
-        '/src/content/peerconnection/trickle-ice/index.html')
+        '/test-turn/index.html')
     .then(function() {
       t.pass('page loaded');
       return driver.findElement(webdriver.By.css('#servers>option')).click();
